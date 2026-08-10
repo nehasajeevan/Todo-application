@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update task</title>
+</head>
+<body>
+    <h1>Update task | ToDo Application</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" value="{{task.title}}" name="title">
+        <button type="submit">Update</button>
+        <a href="{% url 'index' %}" style="color: red;">Cancel</a>
+    </form>
+</body>
+</html>

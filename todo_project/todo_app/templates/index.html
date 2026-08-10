@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo Application</title>
+</head>
+<body>
+    <h1>ToDo Application</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <h2>Add task</h2>
+        <input type="text" name="title" placeholder="Add new task">
+        <button type="submit">Add</button>
+    </form>
+    <hr>
+    <ul>
+        {% for task in tasks %}
+        <li>
+            <a href="{% url 'toggle_task' task.id %}">
+            {% if task.completed %}✅{% else %}🔲{%  endif %}</a>
+            {{task.title}}
+            <a href="{% url 'update_task' task.id %}">✒️</a>
+            <a href="{% url 'delete_task' task.id %}">❌</a>
+        {% empty %}
+        <li>No task added yet.</li>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
