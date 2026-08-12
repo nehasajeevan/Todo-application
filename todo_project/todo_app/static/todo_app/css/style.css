@@ -1,0 +1,48 @@
+body{
+    text-align: center;
+    background-color: aliceblue;
+}
+
+h1{
+    color: rgb(110, 110, 247);
+}
+
+h2{
+    color: brown;
+}
+
+form{
+    padding: 10px;
+}
+
+input{
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+button{
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(155, 243, 243);
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: lightgreen;
+}
+
+ul{
+    list-style: none;
+}
+li{
+    background-color: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px;
+}
+a{
+    text-decoration: none;
+    margin-left: 10px;
+}
